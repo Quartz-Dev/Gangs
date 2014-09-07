@@ -1,17 +1,20 @@
 package me.rockhopper72.utils;
 
 import java.util.ArrayList;
+import java.util.UUID;
 
 import org.bukkit.OfflinePlayer;
 
 public class Gang {
 
-	OfflinePlayer owner = null;
+	OfflinePlayer owner;
 	ArrayList<OfflinePlayer> members = new ArrayList<OfflinePlayer>();
 	String name;
+	UUID gangUUID;
 
-	public Gang() {
-
+	public Gang(OfflinePlayer owner, String name) {
+		this.owner = owner;
+		this.name = name;
 	}
 
 	public OfflinePlayer getOwner() {
@@ -46,9 +49,17 @@ public class Gang {
 		return this.name;
 	}
 
+	public UUID getUUID() {
+		return this.gangUUID;
+	}
+
+	protected void setUUID(UUID uuid) {
+		this.gangUUID = uuid;
+	}
+
 	@Override
 	public String toString() {
-		return this.name;
+		return this.name + this.gangUUID;
 	}
 
 }
