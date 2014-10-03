@@ -9,6 +9,7 @@ public class Gangs extends JavaPlugin {
 	@Override
 	public void onEnable() {
 		this.getCommand("gang").setExecutor(new GangCommand());
+
 	}
 
 	@Override
