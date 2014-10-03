@@ -19,7 +19,7 @@ public class GangManager {
 
 	public void getGangByID(UUID uuid) {
 		// TODO
-		// TODO create uniquie IDs for gangs
+		// TODO create unique IDs for gangs
 	}
 
 	public void deleteGang(UUID uuid) {
